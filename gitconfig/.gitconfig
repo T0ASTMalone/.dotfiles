@@ -1,0 +1,7 @@
+[user]
+	name = miguelaponce
+	email = miguel@rondayapp.com
+[core]
+	editor = nvim
+[safe]
+	directory = %(prefix)///wsl.localhost/Ubuntu/home/t0astm/code/ronday/backend
