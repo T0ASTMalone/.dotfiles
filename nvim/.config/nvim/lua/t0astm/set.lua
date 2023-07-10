@@ -20,7 +20,7 @@ vim.opt.smartindent = true
 vim.opt.updatetime = 50
 
 vim.opt.completeopt= {'menuone', 'noinsert', 'noselect'}
-vim.opt.colorcolumn="80,100,120"
+vim.opt.colorcolumn="81,101,121"
 
 vim.opt.wrap = false 
 
@@ -48,4 +48,15 @@ vim.api.nvim_set_option('updatetime', 300)
 vim.cmd([[
   set signcolumn=yes
 ]])
+
+vim.api.nvim_create_autocmd({"BufEnter"}, {
+  pattern = {"*.{cpp,java}"},
+  command = ":setlocal tabstop=4 shiftwidth=4 expandtab"
+});
+
+vim.api.nvim_create_autocmd({"BufEnter"}, {
+  pattern = {"*.{ts,tsx,js,jsx,d.ts,json,mjs,cjs}"},
+  command = ":setlocal tabstop=2 shiftwidth=2 expandtab"
+})
+
 -- autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })

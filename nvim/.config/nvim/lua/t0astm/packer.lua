@@ -35,7 +35,8 @@ return require('packer').startup(function(use)
       {'neovim/nvim-lspconfig'},
       {'williamboman/mason.nvim'},
       {'williamboman/mason-lspconfig.nvim'},
-
+      --  {'mfussenegger/nvim-jdtls'},
+      {'ray-x/lsp_signature.nvim'},
       -- Autocompletion
       {'hrsh7th/nvim-cmp'},
       {'hrsh7th/cmp-buffer'},
@@ -53,6 +54,12 @@ return require('packer').startup(function(use)
   -- dev languages
   use ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
   use 'nvim-treesitter/playground'
+  use 'mfussenegger/nvim-jdtls'
+
+  -- web components
+  -- use 'jonsmithers/vim-html-template-literals'
+  --- use 'pangloss/vim-javascript'
+  -- use 'webdesus/polymer-ide.vim'
 
   -- dev helpers
   use 'mattn/emmet-vim'

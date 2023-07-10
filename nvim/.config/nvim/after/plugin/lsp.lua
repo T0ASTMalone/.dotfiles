@@ -73,4 +73,7 @@ lsp.on_attach(function(_, bufnr)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
+-- https://github.com/VonHeikemen/lsp-zero.nvim/blob/v2.x/doc/md/guides/setup-with-nvim-jdtls.md
+lsp.skip_server_setup({'jdtls'})
+
 lsp.setup()
